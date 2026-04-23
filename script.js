@@ -267,22 +267,3 @@ document.querySelectorAll('.movie-card').forEach(card => {
     card.style.transition = 'transform 0.1s ease, box-shadow 0.4s ease, border-color 0.3s ease';
   });
 });
-
-/* ── Fix imagem De Volta para o Futuro ── */
-const bttfPaths = [
-  'https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg',
-  'https://image.tmdb.org/t/p/w500/fNOH9f1aA7XRTzl1sAOx9iF553Q.jpg',
-  'https://image.tmdb.org/t/p/w500/pTpxQB1N0waaSc3OSn0e9oc8kx9.jpg',
-  'https://image.tmdb.org/t/p/original/pTpxQB1N0waaSc3OSn0e9oc8kx9.jpg',
-];
-
-function tryNextBttfPath(img, index) {
-  if (index >= bttfPaths.length) return;
-  img.onerror = () => tryNextBttfPath(img, index + 1);
-  img.src = bttfPaths[index];
-}
-
-document.querySelectorAll('img[alt="De Volta para o Futuro"]').forEach(img => {
-  img.onerror = () => tryNextBttfPath(img, 1);
-  img.src = bttfPaths[0];
-});
