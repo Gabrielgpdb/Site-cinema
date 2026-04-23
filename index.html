@@ -1,111 +1,16 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CineEstreia — Filmes em Destaque</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-  <!-- Loader -->
-  <div id="loader">
-    <div class="loader-inner">
-      <div class="film-strip">
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
-      <p class="loader-text">Carregando<span class="dots">...</span></p>
-    </div>
-  </div>
-
-  <!-- Header -->
-  <header id="header">
-    <div class="header-inner">
-      <a href="index.html" class="logo">
-        <span class="logo-icon">🎬</span>
-        <span class="logo-text">Cine<strong>Estreia</strong></span>
-      </a>
-
-      <nav class="nav">
-        <a href="index.html" class="nav-link active">Início</a>
-        <a href="#estreias" class="nav-link">Em Estreia</a>
-        <a href="#filmes" class="nav-link">Filmes</a>
-        <a href="contato.html" class="nav-link">Contato</a>
-      </nav>
-
-      <button class="btn-login">Login</button>
-
-      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-
-    <div class="mobile-nav" id="mobileNav">
-      <a href="index.html" class="nav-link">Início</a>
-      <a href="#estreias" class="nav-link">Em Estreia</a>
-      <a href="#filmes" class="nav-link">Filmes</a>
-      <a href="contato.html" class="nav-link">Contato</a>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-bg">
-      <div class="hero-grain"></div>
-      <div class="hero-gradient"></div>
-    </div>
-    <div class="hero-content">
-      <p class="hero-label">🎞️ Temporada 2026</p>
-      <h1 class="hero-title">As maiores<br /><em>estreias</em> chegaram.</h1>
-      <p class="hero-sub">Clássicos eternos e sucessos de bilheteria — tudo em um lugar só.</p>
-      <a href="#estreias" class="btn-hero">Ver Filmes em Cartaz</a>
-    </div>
-    <div class="hero-scroll-hint">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- Counter Bar -->
-  <div class="counter-bar">
-    <div class="counter-bar-inner">
-      <div class="counter-item">
-        <span class="counter-num" data-target="3">0</span>
-        <span class="counter-label">Filmes em Cartaz</span>
-      </div>
-      <div class="counter-divider"></div>
-      <div class="counter-item">
-        <span class="counter-num" data-target="4">0</span>
-        <span class="counter-label">Salas Disponíveis</span>
-      </div>
-      <div class="counter-divider"></div>
-      <div class="counter-item">
-        <span class="counter-num" data-target="12">0</span>
-        <span class="counter-label">Sessões por Dia</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Estreias Section -->
-  <section class="estreias" id="estreias">
-    <div class="section-header">
-      <p class="section-label">Agora em Cartaz</p>
-      <h2 class="section-title" id="filmes">Filmes em Estreia</h2>
-      <p class="section-sub">Selecione um filme para ver a sinopse completa</p>
-    </div>
-
-    <div class="cards-grid">
+<div class="cards-grid">
 
       <!-- Card 1: Homem-Aranha -->
+      <!-- Card 1: Homem-Aranha 3 -->
       <div class="movie-card" data-modal="spiderman" tabindex="0">
         <div class="card-badge">🕷️ Novo</div>
+        <div class="card-badge">🕷️ Clássico</div>
         <div class="card-poster">
           <img
-            src="https://upload.wikimedia.org/wikipedia/en/0/0f/Spider-Man_No_Way_Home_poster.jpg"
+            src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg"
             alt="Homem-Aranha: Sem Volta Para Casa"
+            src="https://image.tmdb.org/t/p/w500/ko51nCGCHSullHuCCGQwi7nJqRC.jpg"
+            alt="Homem-Aranha 3"
             loading="lazy"
           />
           <div class="card-overlay">
@@ -114,42 +19,26 @@
         </div>
         <div class="card-info">
           <h3 class="card-title">Homem-Aranha</h3>
+          <h3 class="card-title">Homem-Aranha 3</h3>
           <p class="card-year">🗓️ Estreia: 24 de Abril de 2026</p>
           <div class="card-tags">
             <span>Ação</span><span>Aventura</span><span>Marvel</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2: Avatar -->
-      <div class="movie-card featured" data-modal="avatar" tabindex="0">
-        <div class="card-badge gold">⭐ Destaque</div>
-        <div class="card-poster">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/b/b0/Avatar-Teaser-Poster.jpg"
-            alt="Avatar"
-            loading="lazy"
-          />
-          <div class="card-overlay">
-            <span class="card-play">▶ Ver Sinopse</span>
-          </div>
-        </div>
-        <div class="card-info">
-          <h3 class="card-title">Avatar</h3>
-          <p class="card-year">🗓️ Estreia: 24 de Abril de 2026</p>
-          <div class="card-tags">
-            <span>Ficção</span><span>Aventura</span><span>Epic</span>
-          </div>
+@@ -143,24 +143,24 @@ <h3 class="card-title">Avatar</h3>
         </div>
       </div>
 
       <!-- Card 3: De Volta para o Futuro -->
       <div class="movie-card" data-modal="bttf" tabindex="0">
         <div class="card-badge retro">⏱️ Clássico</div>
+      <!-- Card 3: Piratas do Caribe -->
+      <div class="movie-card" data-modal="piratas" tabindex="0">
+        <div class="card-badge retro">⚓ Aventura</div>
         <div class="card-poster">
           <img
             src="https://upload.wikimedia.org/wikipedia/en/d/d2/Back_to_the_Future.jpg"
             alt="De Volta para o Futuro"
+            src="https://image.tmdb.org/t/p/w500/wMMtWEffX1MqGqCMmw5pBBmCWEg.jpg"
+            alt="Piratas do Caribe: No Fim do Mundo"
             loading="lazy"
           />
           <div class="card-overlay">
@@ -158,120 +47,96 @@
         </div>
         <div class="card-info">
           <h3 class="card-title">De Volta para o Futuro</h3>
+          <h3 class="card-title">Piratas do Caribe: No Fim do Mundo</h3>
           <p class="card-year">🗓️ Estreia: 24 de Abril de 2026</p>
           <div class="card-tags">
             <span>Ficção</span><span>Comédia</span><span>Clássico</span>
+            <span>Ação</span><span>Aventura</span><span>Fantasia</span>
           </div>
         </div>
       </div>
-
-    </div>
-  </section>
-
+@@ -171,30 +171,30 @@ <h3 class="card-title">De Volta para o Futuro</h3>
   <!-- Modals -->
   <div class="modal-overlay" id="modalOverlay">
 
     <!-- Homem-Aranha Modal -->
+    <!-- Homem-Aranha 3 Modal -->
     <div class="modal" id="modal-spiderman">
       <button class="modal-close" aria-label="Fechar">✕</button>
       <div class="modal-content">
         <div class="modal-poster">
-          <img src="https://upload.wikimedia.org/wikipedia/en/0/0f/Spider-Man_No_Way_Home_poster.jpg" alt="Homem-Aranha" />
+          <img src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" alt="Homem-Aranha" />
+          <img src="https://image.tmdb.org/t/p/w500/ko51nCGCHSullHuCCGQwi7nJqRC.jpg" alt="Homem-Aranha 3" />
         </div>
         <div class="modal-info">
           <span class="modal-badge">🕷️ Marvel Studios</span>
           <h2>Homem-Aranha: Sem Volta Para Casa</h2>
+          <span class="modal-badge">🕷️ Sony Pictures</span>
+          <h2>Homem-Aranha 3</h2>
           <div class="modal-meta">
             <span>📅 2021 (Reexibição 2026)</span>
             <span>⏱️ 2h 28min</span>
+            <span>📅 2007 (Reexibição 2026)</span>
+            <span>⏱️ 2h 19min</span>
             <span>🎭 Ação / Aventura</span>
           </div>
           <p class="modal-sinopse">
             Pela primeira vez na história cinematográfica do Homem-Aranha, a identidade de Peter Parker é revelada ao mundo, colocando em risco tudo que ele valoriza. Peter pede ajuda ao Doutor Estranho para que o mundo esqueça que ele é o Homem-Aranha. Mas quando o feitiço dá errado, vilões do multiverso começam a aparecer, transformando a missão do herói numa aventura épica e emocionante.
+            O aparentemente invencível Homem-Aranha enfrenta uma nova safra de vilões, incluindo o Sandman, que tem o poder de se transformar em areia. Enquanto os superpoderes de Peter Parker são alterados por um organismo alienígena que desperta seu lado sombrio, ele também precisa lidar com o inimigo Eddie Brock e um triângulo amoroso que ameaça seu relacionamento com Mary Jane.
           </p>
           <div class="modal-details">
             <div><strong>Diretor:</strong> Jon Watts</div>
             <div><strong>Elenco:</strong> Tom Holland, Zendaya, Benedict Cumberbatch</div>
+            <div><strong>Diretor:</strong> Sam Raimi</div>
+            <div><strong>Elenco:</strong> Tobey Maguire, Kirsten Dunst, James Franco</div>
             <div><strong>Classificação:</strong> 12 anos</div>
           </div>
           <a href="https://www.imdb.com/title/tt10872600/" target="_blank" class="btn-imdb">Ver no IMDb ↗</a>
+          <a href="https://www.imdb.com/title/tt0413300/" target="_blank" class="btn-imdb">Ver no IMDb ↗</a>
         </div>
       </div>
     </div>
-
-    <!-- Avatar Modal -->
-    <div class="modal" id="modal-avatar">
-      <button class="modal-close" aria-label="Fechar">✕</button>
-      <div class="modal-content">
-        <div class="modal-poster">
-          <img src="https://upload.wikimedia.org/wikipedia/en/b/b0/Avatar-Teaser-Poster.jpg" alt="Avatar" />
-        </div>
-        <div class="modal-info">
-          <span class="modal-badge gold">⭐ James Cameron</span>
-          <h2>Avatar</h2>
-          <div class="modal-meta">
-            <span>📅 2009 (Reexibição 4K 2026)</span>
-            <span>⏱️ 2h 42min</span>
-            <span>🎭 Ficção / Aventura</span>
-          </div>
-          <p class="modal-sinopse">
-            Em um futuro distante, Jake Sully, um ex-fuzileiro naval paraplégico, viaja para o exuberante planeta Pandora, onde humanos e os Na'vi — uma raça alienígena de grande estatura e ligada à natureza — vivem em conflito. Jake assume um avatar Na'vi e, ao se integrar ao povo local, precisa escolher entre sua missão original e a defesa de um mundo que passou a considerar seu lar.
-          </p>
-          <div class="modal-details">
-            <div><strong>Diretor:</strong> James Cameron</div>
-            <div><strong>Elenco:</strong> Sam Worthington, Zoe Saldaña, Sigourney Weaver</div>
-            <div><strong>Classificação:</strong> 12 anos</div>
-          </div>
-          <a href="https://www.imdb.com/title/tt0499549/" target="_blank" class="btn-imdb">Ver no IMDb ↗</a>
-        </div>
+@@ -227,30 +227,30 @@ <h2>Avatar</h2>
       </div>
     </div>
 
     <!-- BTTF Modal -->
     <div class="modal" id="modal-bttf">
+    <!-- Piratas do Caribe Modal -->
+    <div class="modal" id="modal-piratas">
       <button class="modal-close" aria-label="Fechar">✕</button>
       <div class="modal-content">
         <div class="modal-poster">
           <img src="https://upload.wikimedia.org/wikipedia/en/d/d2/Back_to_the_Future.jpg" alt="De Volta para o Futuro" />
+          <img src="https://image.tmdb.org/t/p/w500/wMMtWEffX1MqGqCMmw5pBBmCWEg.jpg" alt="Piratas do Caribe: No Fim do Mundo" />
         </div>
         <div class="modal-info">
           <span class="modal-badge retro">⏱️ Universal Pictures</span>
           <h2>De Volta para o Futuro</h2>
+          <span class="modal-badge retro">⚓ Walt Disney Pictures</span>
+          <h2>Piratas do Caribe: No Fim do Mundo</h2>
           <div class="modal-meta">
             <span>📅 1985 (Clássico em Cartaz 2026)</span>
             <span>⏱️ 1h 56min</span>
             <span>🎭 Ficção / Comédia / Aventura</span>
+            <span>📅 2007 (Reexibição 2026)</span>
+            <span>⏱️ 2h 48min</span>
+            <span>🎭 Ação / Aventura / Fantasia</span>
           </div>
           <p class="modal-sinopse">
             Marty McFly, um adolescente de 17 anos, é acidentalmente enviado de volta para 1955 numa máquina do tempo construída por seu excêntrico amigo, o Doutor Emmett Brown. Preso no passado, Marty interfere inadvertidamente no romance entre seus pais e agora deve fazer com que eles se apaixonem — e ainda encontrar uma forma de voltar para 1985.
+            Após perder o Capitão Jack Sparrow para o Cofre de Davy Jones, Will Turner, Elizabeth Swann e o Capitão Barbossa embarcam numa viagem épica até os confins da Terra para resgatá-lo. Enquanto isso, a Companhia das Índias Orientais aperta seu domínio sobre os mares. Para salvar a pirataria, os Lordes Piratas precisam se unir numa última batalha pela liberdade nos sete mares.
           </p>
           <div class="modal-details">
             <div><strong>Diretor:</strong> Robert Zemeckis</div>
             <div><strong>Elenco:</strong> Michael J. Fox, Christopher Lloyd, Lea Thompson</div>
             <div><strong>Classificação:</strong> Livre</div>
+            <div><strong>Diretor:</strong> Gore Verbinski</div>
+            <div><strong>Elenco:</strong> Johnny Depp, Orlando Bloom, Keira Knightley</div>
+            <div><strong>Classificação:</strong> 12 anos</div>
           </div>
           <a href="https://www.imdb.com/title/tt0088763/" target="_blank" class="btn-imdb">Ver no IMDb ↗</a>
+          <a href="https://www.imdb.com/title/tt0449088/" target="_blank" class="btn-imdb">Ver no IMDb ↗</a>
         </div>
       </div>
     </div>
-
-  </div>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <a href="index.html" class="logo">
-        <span class="logo-icon">🎬</span>
-        <span class="logo-text">Cine<strong>Estreia</strong></span>
-      </a>
-      <p class="footer-copy">© 2026 CineEstreia. Todos os direitos reservados.</p>
-      <div class="footer-links">
-        <a href="contato.html">Contato</a>
-        <a href="#">Política de Privacidade</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
